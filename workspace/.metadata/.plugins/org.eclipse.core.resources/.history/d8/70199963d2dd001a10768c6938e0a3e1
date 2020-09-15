@@ -1,0 +1,6 @@
+package com.pc.oop.polymorphism.override;
+
+//IS -A 
+public class Dog extends Animal {
+
+}

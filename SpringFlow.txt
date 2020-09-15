@@ -1,0 +1,75 @@
+UI  
+  || JSON  {"eid": 1, "ename":"Sandeep", "email": "", "phone": 111 , "dept":"SW"}
+           {"status": "Successfully inserted" }
+		   
+pacakge com.xyz.emp.controller		   
+@RestController
+@RequestMapping("/emp")
+class Controller{
+  @Autowired
+  Service service // Dependency Injection @Autowired
+  
+  @PostMapping("/insert")
+  public String insert(){
+   String res =  service.insert();
+   return res; 
+  }
+
+} 
+--------------------------------
+pacakge com.xyz.emp.service
+//Business logic goes to here
+class Service {
+  @Autowired
+  DAO dao;
+  public String insert(){
+   Strig res =  dao.insert();
+   return res;
+  }
+
+
+}
+-----------------------
+pacakge com.xyz.emp.dao
+//Data Access Object (JDBC)
+//JdbcTemplate
+class DAO{
+
+  public String insert(){
+    // JDBC code 
+	// writing data into the data 
+	//Insert query
+     return "";
+  }
+
+
+}
+
+  ||
+
+Database 
+Eid | Ename | Email | Phone | Dept
+
+{"eid": 1, "ename":"Sandeep", "email": "", "phone": 111 , "dept":"SW"}
+
+pacakge com.xyz.emp.model 
+Entity
+Model 
+POJO (Plan Old Java Object)
+class Employee{
+  int eid;
+  String ename; 
+  String email;
+  long   phone;
+  String dept;
+
+   
+   //Constructor
+   
+   //Get/Set 
+
+
+}
+
+Employee e1 = new Employee(1,Sandeep)
+

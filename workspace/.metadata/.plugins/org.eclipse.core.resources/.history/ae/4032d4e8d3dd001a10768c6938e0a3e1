@@ -1,0 +1,17 @@
+package com.pc.oop.polymorphism.override;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Animal a = new Animal();
+		a.eating();
+		a.running();
+		
+       Dog d = new Dog();
+       d.eating();
+       d.running();
+       
+
+	}
+
+}
