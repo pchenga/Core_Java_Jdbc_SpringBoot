@@ -2,4 +2,5 @@
 <aop-reference-model>
 <aop-project name="demo"/>
 <aop-project name="SpringBootJdbcTemplate"/>
+<aop-project name="gs-accessing-data-jpa-complete"/>
 </aop-reference-model>

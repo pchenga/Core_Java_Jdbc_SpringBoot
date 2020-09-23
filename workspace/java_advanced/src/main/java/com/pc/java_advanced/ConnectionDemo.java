@@ -2,6 +2,8 @@ package com.pc.java_advanced;
 
 import java.sql.Connection;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import java.sql.ResultSet;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -43,6 +45,8 @@ public class ConnectionDemo {
 			//Table representation of data
 			ResultSet rs = st.executeQuery(selectQuery);
 			
+			List<Employee> list = new ArrayList<Employee>();
+			
 			while(rs.next()) {
 				
 				int      eid = rs.getInt("eid");
@@ -51,6 +55,10 @@ public class ConnectionDemo {
 				long   phone = rs.getLong("phone");
 				double sal   = rs.getDouble("salary");
 				
+				//Employee e = new Employee();
+				//e.setEid(eid);
+				
+				//list.add(e);
 				System.out.println(eid +"\t" + ename +"\t" + email +"\t" + phone +"\t" + sal );
 				
 			}
