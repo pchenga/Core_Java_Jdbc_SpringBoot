@@ -30,9 +30,11 @@ public class AccessingDataJpaApplication {
 			// fetch all customers
 			log.info("Customers found with findAll():");
 			log.info("-------------------------------");
+			
 			for (Customer customer : repository.findAll()) {
 				log.info(customer.toString());
 			}
+			
 			log.info("");
 
 			// fetch an individual customer by ID
